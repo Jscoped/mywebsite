@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansation:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="navdiv">
+      <div class="logo">
+        <a href="#" class="beacon">OpenShelf</a>
+      </div>
+      <ul>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="main-content">
+    <div class="signup-container">
+      <h2>Sign Up</h2>
+      <form id="signup-form" autocomplete="on">
+        <label for="name">Enter Your Name:</label>
+        <span id="usernameError" class="error">Wrong username.</span><br><br>
+
+        <input type="text" id="name" name="name" autocomplete="name" required />
+        <button type="submit" class="js-submitbutton">Submit</button>
+      </form>
+    </div>
+
+      <script>
+        const signupform = document.getElementById('signup-form');
+
+        signupform.addEventListener('submit', (event) => {
+          event.preventDefault();
+
+          const inputbox = document.getElementById("name");
+          const errorMsg = document.getElementById("usernameError");
+          if (!inputbox) return;
+
+          const rawInput = inputbox.value.trim();
+          const input = rawInput.charAt(0).toUpperCase() + rawInput.slice(1).toLowerCase();
+
+          if (input) {
+            if (input === "Admin") {
+              localStorage.setItem("username", input);
+              localStorage.setItem("signstatus", "true");
+              window.location.href = "homepage.html";
+            } else {
+              errorMsg.style.display = "inline"; 
+              inputbox.style.border = "1px solid red";
+            }
+          
+        }; 
+        });
+
+      </script>
+
+</body>
+
+</html>
