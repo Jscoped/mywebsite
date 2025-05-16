@@ -127,6 +127,7 @@ a:active {
 }
 
 @media (max-width: 768px) {
+
   .logs-header,
   .log-entry {
     grid-template-columns: 1fr;
@@ -175,24 +176,25 @@ a:active {
 }
 
 @media (max-width: 768px) {
+
   .logs-header,
   .log-entry {
     grid-template-columns: 1fr;
     gap: 5px;
-      font-family: "Sansation", sans-serif;
+    font-family: "Sansation", sans-serif;
 
   }
 
   .logs-header span {
     display: none;
-      font-family: "Sansation", sans-serif;
+    font-family: "Sansation", sans-serif;
 
   }
 
   .log-entry {
     padding: 15px 0;
     border-bottom: 2px solid #eee;
-      font-family: "Sansation", sans-serif;
+    font-family: "Sansation", sans-serif;
 
   }
 
@@ -200,21 +202,21 @@ a:active {
     content: attr(data-label);
     font-weight: bold;
     margin-right: 10px;
-      font-family: "Sansation", sans-serif;
+    font-family: "Sansation", sans-serif;
 
   }
 
   #navdiv ul {
     margin-left: auto;
     gap: 1rem;
-      font-family: "Sansation", sans-serif;
+    font-family: "Sansation", sans-serif;
 
   }
 
   .clear-btn {
     width: 90%;
     cursor: pointer;
-      font-family: "Sansation", sans-serif;
+    font-family: "Sansation", sans-serif;
 
   }
 }
@@ -224,19 +226,19 @@ a:active {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
-      font-family: "Sansation", sans-serif;
+    font-family: "Sansation", sans-serif;
 
   }
 
   .logo a {
     font-size: 1.2rem;
-      font-family: "Sansation", sans-serif;
+    font-family: "Sansation", sans-serif;
 
   }
 
   .title h1 {
     font-size: 1.5rem;
-      font-family: "Sansation", sans-serif;
+    font-family: "Sansation", sans-serif;
 
   }
 }
@@ -250,7 +252,7 @@ a:active {
 
 .logs-header {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 10px;
   font-weight: bold;
   border-bottom: 2px solid #333;
@@ -261,9 +263,44 @@ a:active {
 
 .log-entry {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 10px;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
   font-family: "Sansation", sans-serif;
+}
+
+.fa-solid {
+  color: black;
+  position: absolute;
+  transition: background-color 0.2s linear;
+  transition: transform 0.1s linear;
+}
+
+.fa-solid:hover {
+  transform: scale(1.3);
+}
+
+
+.delete-btn:hover {
+  background-color: #e0e0e0;
+
+}
+
+.delete-btn:active {
+  opacity: 0.5;
+}
+
+.delete-btn {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 18px;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 6px;
 }

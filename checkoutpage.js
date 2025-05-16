@@ -106,9 +106,12 @@ borrowForm.addEventListener('submit', (event) => {
   currentLogs.push(newEntry);
   localStorage.setItem('borrowLogs', JSON.stringify(currentLogs));
 
+const msg = document.querySelector(".redirectory-message");
 
-  alert("Book checked in successfully! Redirecting to logs...");
-  setTimeout(() => {
+msg.style.display = "flex";
+
+
+setTimeout(() => {
   window.location.href = "logs.html";
 }, 2000);
 
